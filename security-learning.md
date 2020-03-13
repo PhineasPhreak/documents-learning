@@ -11,6 +11,7 @@
   
 * [Probable-Wordlists](https://github.com/berzerk0/Probable-Wordlists) - This repository does not contain code, but links to a group of lists. 
 
+* [Static Binaries](https://github.com/andrew-d/static-binaries) - This repo contains a bunch of statically-linked binaries of various tools.
 
 # Site with Passwords & Wordlists
 * [Weakpass](https://weakpass.com/) - Here you can find a compilation of wordlists from a variety of sources, which were joined together.
