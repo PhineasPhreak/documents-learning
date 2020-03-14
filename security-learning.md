@@ -12,11 +12,12 @@
 * [Probable-Wordlists](https://github.com/berzerk0/Probable-Wordlists) - This repository does not contain code, but links to a group of lists. 
 
 
-## Various Tools :
+# Various Tools & VM OS Pentest :
 * [Static Binaries](https://github.com/andrew-d/static-binaries) - This repo contains a bunch of statically-linked binaries of various tools.
 
 * [GTFOBins](https://gtfobins.github.io/) - GTFOBins is a curated list of Unix binaries that can be exploited by an attacker to bypass local security restrictions.
 
+* [Commando VM 2.0](https://www.fireeye.com/blog/threat-research/2019/08/commando-vm-customization-containers-kali.html) - Complete Mandiant Offensive VM [*(Commando VM Repo Github)*](https://github.com/fireeye/commando-vm), a fully customizable Windows-based pentesting virtual machine distribution.
 
 # Site with Passwords & Wordlists
 * [Weakpass](https://weakpass.com/) - Here you can find a compilation of wordlists from a variety of sources, which were joined together.
