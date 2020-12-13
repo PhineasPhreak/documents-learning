@@ -15,12 +15,12 @@ This tutorial assumes that you are using swap file on your system, not a swap pa
 
 Now, let’s see how to increase the swap file. First thing first, make sure that you have a swap file in your system.
 ```console
-swapon --show
+$ swapon --show
 ```
 
 It will show the current swap available. If you see the type file, it indicates that you are using a swap file.
 ```console
-swapon --show
+$ swapon --show
 NAME      TYPE SIZE USED PRIO
 /swapfile file   2G   0B   -2
 ```
@@ -29,22 +29,22 @@ Now before you resize the swap file, you should turn the swap off. You should al
 
 You can [disable a given swap file](https://web.mit.edu/rhel-doc/5/RHEL-5-manual/Deployment_Guide-en-US/s1-swap-removing.html) using this command. The ***command doesn’t produce any output and it may take a few minutes to complete***:
 ```console
-sudo swapoff /swapfile
+$ sudo swapoff /swapfile
 ```
 
 Now [use the fallocate command in Linux](https://man7.org/linux/man-pages/man1/fallocate.1.html) to change the size of the swap file.
 ```console
-sudo fallocate -l 4G /swapfile
+$ sudo fallocate -l 4G /swapfile
 ```
 
 Make sure that you mark this file as swap file:
 ```console
-sudo mkswap /swapfile
+$ sudo mkswap /swapfile
 ```
 
 You should see an output like this where it warns you that old swap signature is being wiped out.
 ```console
-sudo mkswap /swapfile
+$ sudo mkswap /swapfile
 mkswap: /swapfile: warning: wiping old swap signature.
 Setting up swapspace version 1, size = 4 GiB (4294967296 bytes)
 no label, UUID=c50b27b0-a530-4dd0-9377-aa28eabf3957
@@ -52,13 +52,13 @@ no label, UUID=c50b27b0-a530-4dd0-9377-aa28eabf3957
 
 Once you do that, enable the swap file:
 ```console
-sudo swapon /swapfile
+$ sudo swapon /swapfile
 ```
 
 That’s it. You just increased the swap size in Ubuntu from 2 GB to 4 GB.</br>
 You can [check swap size](https://www.cyberciti.biz/faq/linux-check-swap-usage-command/) using the [free command](https://man7.org/linux/man-pages/man1/free.1.html) or the `swapon --show` command.
 ```console
-free -h
+$ free -h
               total        used        free      shared  buff/cache   available
 Mem:           7.7G        873M        5.8G        265M        1.0G        6.3G
 Swap:          4.0G          0B        4.0G
