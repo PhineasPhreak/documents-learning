@@ -1,5 +1,10 @@
 # documents-learning
 
+## Linux Tips, Tricks and Tutorial
+* Site : [Linuxize](https://linuxize.com/)
+
+* Site : [DigitalOcean](https://www.digitalocean.com/community/tutorials/)
+
 ## GPU Passthrough
 GPU passthrough is a technology that allows the Linux kernel to directly present an internal PCI GPU to a virtual machine.
 
@@ -7,10 +12,7 @@ See tutorial about [Complete Single GPU Passthrough](https://github.com/QaidVoid
 
 Full Archlinux wiki about [PCI Passthrough](https://wiki.archlinux.org/title/PCI_passthrough_via_OVMF)
 
-## Linux Tips, Tricks and Tutorial
-* Site : [Linuxize](https://linuxize.com/)
-
-* Site : [DigitalOcean](https://www.digitalocean.com/community/tutorials/)
+Setting up an NVIDIA GPU for a virtual machine in [Red Hat Virtualization](https://access.redhat.com/documentation/en-us/red_hat_virtualization/4.4/html/setting_up_an_nvidia_gpu_for_a_virtual_machine_in_red_hat_virtualization/index)
 
 ## Redhat (RHEL)
 Red Hat is an enterprise software company with an open source development model.
