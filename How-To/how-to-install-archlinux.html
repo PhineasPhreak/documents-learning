@@ -1063,7 +1063,7 @@ body .markdown-body
 .highlight .vi{color:teal}
 .highlight .il{color:#009999}
 .highlight .gc{color:#999;background-color:#EAF2F5}
-</style><title>Archlinux Installation Guide - PSPK</title></head><body><article class="markdown-body"><h1 id="archlinux-installation-25082021">ArchLinux Installation <em>(25/08/2021)</em><a class="headerlink" href="#archlinux-installation-25082021" title="Permanent link"></a></h1>
+</style><title>how-to-install-archlinux</title></head><body><article class="markdown-body"><h1 id="archlinux-installation-25082021">ArchLinux Installation <em>(25/08/2021)</em><a class="headerlink" href="#archlinux-installation-25082021" title="Permanent link"></a></h1>
 <p><strong>A simple, lightweight distribution</strong></p>
 <p>You&rsquo;ve reached the website for Arch Linux, a lightweight and flexible Linux® distribution that tries to Keep It Simple.</p>
 <p><strong>Requirements</strong> :</p>
@@ -1272,13 +1272,14 @@ mount /dev/sda4 /mnt/home
 </pre></div>
 
 <p>After that, Update pacman for multilib
-<div class="highlight"><pre>pacman -Sy
+<div class="highlight"><pre>pacman -Syy
 </pre></div></p>
 <h2 id="install-archlinux">Install ArchLinux<a class="headerlink" href="#install-archlinux" title="Permanent link"></a></h2>
 <p>Next, start installing Arch Linux by issuing the following command.
 <div class="highlight"><pre>pacstrap -i /mnt base base-devel linux linux-headers linux-firmware nano vim bash-completion
 </pre></div></p>
-<p>To install the LTS kernel and Linux LTS headers : <code>linux-lts</code> and <code>linux-lts-headers</code></p>
+<p>To install the LTS kernel and Linux LTS headers : <code>linux-lts</code> and <code>linux-lts-headers</code>.
+For more information see <a href="https://wiki.archlinux.org/title/kernel#Officially_supported_kernels">Officially supported kernels</a></p>
 <p>After the installation completes, generate <code>fstab</code> file for your new Arch Linux system by issuing the following command.</p>
 <p><div class="highlight"><pre>genfstab -U -p /mnt &gt;&gt; /mnt/etc/fstab
 </pre></div>

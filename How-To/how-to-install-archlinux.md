@@ -199,7 +199,7 @@ Include = /etc/pacman.d/mirrorlist
 
 After that, Update pacman for multilib
 ```bash
-pacman -Sy
+pacman -Syy
 ```
 
 ## Install ArchLinux
@@ -208,7 +208,8 @@ Next, start installing Arch Linux by issuing the following command.
 pacstrap -i /mnt base base-devel linux linux-headers linux-firmware nano vim bash-completion
 ```
 
-To install the LTS kernel and Linux LTS headers : `linux-lts` and `linux-lts-headers`
+To install the LTS kernel and Linux LTS headers : `linux-lts` and `linux-lts-headers`.
+For more information see [Officially supported kernels](https://wiki.archlinux.org/title/kernel#Officially_supported_kernels)
 
 After the installation completes, generate `fstab` file for your new Arch Linux system by issuing the following command.
 
