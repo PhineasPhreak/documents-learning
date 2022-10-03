@@ -179,7 +179,7 @@ cp -v /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup  # make backup
     Now, get the good mirror list with reflector and save it to mirrorlist. You can change the country from US to your own country.
     
     ```bash
-    reflector -c "US" --fastest 12 --latest 10 --number 12 --save /etc/pacman.d/mirrorlist
+    reflector -c "US" --fastest 12 --latest 10 --number 12 --protocol https --completion-percent 100 --sort rate --save /etc/pacman.d/mirrorlist
     ```
 
 * **Rankmirror** same thing than reflector, but this is the old way.
