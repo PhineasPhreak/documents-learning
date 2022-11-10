@@ -14,13 +14,13 @@ Watch list Apps in AppImage format : [Watchlist](https://appimage.github.io/apps
 | :-----------: | :----------------------------------------------------------: |
 |  MKVToolNix   | [MKVToolNix Appimage](https://mkvtoolnix.download/downloads.html#appimage) |
 |   FontForge   | [FontForge Appimage](https://fontforge.org/en-US/downloads/gnulinux-dl/) |
-| BalenaEtcher  |        [balenaEtcher](https://www.balena.io/etcher/)         |
+| BalenaEtcher  | [balenaEtcher](https://www.balena.io/etcher/) |
 |    Drawio     | [Drawio](https://github.com/jgraph/drawio-desktop/releases/tag/v15.8.4) |
-|   Inkscape    |              [Inkscape](https://inkscape.org/)               |
-|     Krita     |    [Krita](https://krita.org/en/download/krita-desktop/)     |
-|   Obsidian    |               [Obsidian](https://obsidian.md/)               |
+|   Inkscape    | [Inkscape](https://inkscape.org/) |
+|     Krita     | [Krita](https://krita.org/en/download/krita-desktop/) |
+|   Obsidian    | [Obsidian](https://obsidian.md/) |
 |  UNetbootin   | [UNetbootin](https://unetbootin.github.io/linux_download.html) |
-|    Typora     |              [Typora Site](https://typora.io/)               |
+|    Typora     | [Typora Site](https://typora.io/) |
 | DesktopEditor | [DesktopEditor Download](https://github.com/ONLYOFFICE/appimage-desktopeditors/releases/download/v7.1.1/DesktopEditors-x86_64.AppImage) |
 |    Joplin     | [Joplin Download](https://github.com/laurent22/joplin/releases/download/v2.8.8/Joplin-2.8.8.AppImage) |
-|   Audacity    |      [Audacity](https://www.audacityteam.org/download/)      |
+|   Audacity    | [Audacity](https://www.audacityteam.org/download/) |
