@@ -76,6 +76,11 @@ Download a YouTube playlist with the videos being 1080p and the best audio. Save
 yt-dlp -f 'bv*[height=1080]+ba' --download-archive videos.txt  https://www.youtube.com/playlist?list=PLlVlyGVtvuVnUjA4d6gHKCSrLAAm2n1e6 -o '%(channel_id)s/%(playlist_id)s/%(id)s.%(ext)s'
 ```
 
+Download a YouTube playlist with the best audio quality and convert the audio to mp3/320K format:
+```shell
+yt-dlp -f 'ba' -x --audio-quality 320K --audio-format mp3 https://www.youtube.com/playlist?list=PLRW80bBvVD3XEISokjo68MtxF8GvpuSsW -o '%(playlist_index)s. %(title)s.%(ext)s'
+```
+
 ## Channels
 Download an entire YouTube channel as 720p video with best audio. Save into a folder named after the channel name with the video files being the title of the video (*Foo the Flowerhorn/5 Months Update – Flowerhorn Foods.webm*).
 ```shell
