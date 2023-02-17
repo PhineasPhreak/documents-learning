@@ -78,7 +78,7 @@ yt-dlp -f 'bv*[height=1080]+ba' --download-archive videos.txt  https://www.youtu
 
 Download a YouTube playlist with the best audio quality and convert the audio to mp3/320K format:
 ```shell
-yt-dlp -f 'ba' -x --audio-quality 320K --audio-format mp3 https://www.youtube.com/playlist?list=PLRW80bBvVD3XEISokjo68MtxF8GvpuSsW -o '%(playlist_index)s. %(title)s.%(ext)s'
+yt-dlp -f 'ba' -x --audio-quality 320K --audio-format mp3 https://www.youtube.com/playlist?list=OLAK5uy_lZlCKkJNxwisNeB7bskSuYr6czRSrUAKQ --embed-metadata -o '%(playlist_index)s. %(title)s.%(ext)s'
 ```
 
 ## Channels
