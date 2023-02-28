@@ -87,6 +87,11 @@ Download an entire YouTube channel as 720p video with best audio. Save into a fo
 yt-dlp -f 'bv*[height=720]+ba' --download-archive videos.txt https://www.youtube.com/c/FootheFlowerhorn/videos -o '%(channel)s/%(title)s.%(ext)s'
 ```
 
+Download all playlists of YouTube channel/user keeping each playlist in separate directory and download with the best audio quality and convert the audio to mp3/320K format:
+```shell
+yt-dlp -f 'ba' -x --audio-quality 320K --audio-format mp3 https://www.youtube.com/@SubZero90EpicMusic/playlists --embed-metadata -o '%(uploader)s/%(playlist)s/%(playlist_index)s. %(title)s.%(ext)s'
+```
+
 ---
 
 # Downloading YouTube videos as audio with yt-dlp
