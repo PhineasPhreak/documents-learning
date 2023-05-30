@@ -1,4 +1,4 @@
-# Cryptsetup *(version : 2.0.2)*
+# Cryptsetup *(version : 2.4.3)*
 > * You can also use old <action> syntax aliases :
 >     * open: create (plainOpen), luksOpen, loopaesOpen, tcryptOpen
 >     * close: remove (plainClose), luksClose, loopaesClose, tcryptClose
@@ -100,19 +100,19 @@ Now we will use Cryptsetup on this formatted partition to make an encrypted LUKS
     After running this, you will be asked a passphrase. That passphrase is how you will access the device whenever you want. So make sure to remember the passphrase.
 
 * The basic options are as follows:
-    > --cypher:  This determines the cryptographic cypher used on the partition.  The default option is aes-xts-plain64
+    > --cipher:  This determines the cryptographic cypher used on the partition.  The default option is aes-xts-plain64
     >
     > --key-size: The length of the key used.  The default is 256
     >
     > --hash: Chooses the hash algorithm used to derive the key.  The default is sha256.
     >
-    > --time: The time used for passphrase processing.  The default is 2000 milliseconds.
+    > --timeout: The time used for passphrase processing.  The default is 2000 milliseconds.
     >
     > --use-random/--use-urandom: Determines the random number generator used.  The default is --use-random.
 
     Obviously, you’d want to use the path to whichever partition that you’re encrypting. If you do want to use options, it would look like the following.
     ```shell
-    cryptsetup -c aes-xts-plain64 --key-size 512 --hash sha512 --time 5000 --use-urandom /dev/xxx1
+    cryptsetup --verbose --verify-passphrase -cipher aes-xts-plain64 --key-size 512 --hash sha512 --timeout 5000 --use-urandom luksFormat /dev/xxx1
     ```
 
     **Cryptsetup** will ask for a passphrase. Choose one that is both secure and memorable. If you forget it, **your data will be lost**.
