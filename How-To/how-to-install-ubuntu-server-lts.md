@@ -62,7 +62,7 @@ sudo apt install bash-completion nano tmux
     ```
 
 ### Install Desktop (KDE, Gnome, i3wm)
-* **Install KDE desktop**
+#### Install KDE desktop
     ```shell
     sudo apt install kde-plasma-desktop
     ```
@@ -75,7 +75,8 @@ sudo apt install bash-completion nano tmux
     and often other platforms too. [Here is the complete list](https://apps.kde.org/)
 
 
-* **Install Gnome desktop**
+#### Install Gnome desktop
+
     By default, the *Window Manager* is `wayland` if you want to change and select `X11` at login (Display Manager).
     ```shell
     sudo apt install ubuntu-desktop-minimal
@@ -91,7 +92,8 @@ sudo apt install bash-completion nano tmux
 
     **optional**, custom [gnome-shell spacing](https://gist.github.com/PhineasPhreak/0fe00b4a967eb6f77e577cd0c71dab6e)
 
-* **Install i3wm desktop**
+#### Install i3wm desktop
+
     [Installation of i3 for Ubuntu/Archlinux](https://github.com/PhineasPhreak/dotfiles/blob/master/configs/i3wm/.config/i3/README.md)
 
 
