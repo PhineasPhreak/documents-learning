@@ -15,7 +15,7 @@ Watch list Apps in AppImage format : [Watchlist](https://appimage.github.io/apps
 | MKVToolNix    | [MKVToolNix Appimage](https://mkvtoolnix.download/downloads.html#appimage)                                                              |
 | FontForge     | [FontForge Appimage](https://fontforge.org/en-US/downloads/gnulinux-dl/)                                                                |
 | BalenaEtcher  | [balenaEtcher](https://www.balena.io/etcher/)                                                                                           |
-| Drawio        | [Drawio](https://github.com/jgraph/drawio-desktop/releases/tag/v15.8.4)                                                                 |
+| Drawio        | [Drawio Github](https://github.com/jgraph/drawio-desktop/) & [Drawio Site](https://app.diagrams.net/)                                   |
 | Inkscape      | [Inkscape](https://inkscape.org/)                                                                                                       |
 | Krita         | [Krita](https://krita.org/en/download/krita-desktop/)                                                                                   |
 | Obsidian      | [Obsidian](https://obsidian.md/)                                                                                                        |
@@ -26,3 +26,5 @@ Watch list Apps in AppImage format : [Watchlist](https://appimage.github.io/apps
 | Audacity      | [Audacity](https://www.audacityteam.org/download/)                                                                                      |
 | Peazip        | [Peazip](https://peazip.github.io/index.html)                                                                                           |
 | Jitsi         | [Jitsi](https://github.com/jitsi/jitsi-meet-electron/releases)                                                                          |
+| Bitwarden     | [Bitwarden](https://bitwarden.com/download/)                                                                                            |
+| Texstudio     | [Texstudio](https://www.texstudio.org/)                                                                                                 |
