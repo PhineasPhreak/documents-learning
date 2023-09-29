@@ -1,4 +1,4 @@
-# ArchLinux Installation *(25/08/2021)*
+# ArchLinux Installation *(29/09/2023)*
 **A simple, lightweight distribution**
 
 You've reached the website for Arch Linux, a lightweight and flexible Linux® distribution that tries to Keep It Simple.
@@ -81,7 +81,7 @@ efivar -L  # tools and libraries to work with EFI variables
         ```bash
         [iwd]: station <device> connect <SSID>
         ```
-    **If a passphrase is required, you will be prompted to enter it**. Alternatively, you can supply it as a command line argument:
+        **If a passphrase is required, you will be prompted to enter it**. Alternatively, you can supply it as a command line argument:
 ```bash
 iwctl --passphrase <passphrase> station <device> connect <SSID>
 ```
@@ -175,9 +175,9 @@ cp -v /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup  # make backup
     ```bash
     reflector --list-countries  # display a table of the distribution of servers by country
     ```
-    
+
     Now, get the good mirror list with reflector and save it to mirrorlist. You can change the country from US to your own country.
-    
+
     ```bash
     reflector -c "US" --fastest 12 --latest 10 --number 12 --protocol https --completion-percent 100 --sort rate --save /etc/pacman.d/mirrorlist
     ```
@@ -205,8 +205,19 @@ pacman -Syy
 ## Install ArchLinux
 Next, start installing Arch Linux by issuing the following command.
 ```bash
-pacstrap -i /mnt base base-devel linux linux-headers linux-firmware nano vim bash-completion
+pacstrap -K -i /mnt base base-devel linux linux-headers linux-firmware nano bash-completion
 ```
+> **Options pacstrap:**
+> -K : Initialize an empty pacman keyring in the target (implies -G).
+> -i : Prompt for package confirmation when needed (run interactively).
+> **Packages:**
+> base : Minimal package set to define a basic Arch Linux installation
+> base-devel : 	Basic tools to build Arch Linux packages
+> linux : The Linux kernel and modules or others like (linux-lts, linux-zen)
+> linux-headers : Headers and scripts for building modules for the Linux kernel
+> linux-firmware : Firmware files for Linux
+> nano : Pico editor clone with enhancements
+> bash-completion : Programmable completion for the bash shell
 
 To install the LTS kernel and Linux LTS headers : `linux-lts` and `linux-lts-headers`.
 For more information see [Officially supported kernels](https://wiki.archlinux.org/title/kernel#Officially_supported_kernels)
@@ -390,12 +401,24 @@ Let me show it for the UEFI systems first.
     ```
     And then install grub like this (don’t put the disk number sda1, just the disk name sda):
     ```bash
-    grub-install /dev/sda
+    grub-install --target=i386-pc /dev/sda
     ```
     One last step, generate the main configuration file `/boot/grub/grub.cfg`:
     ```bash
     grub-mkconfig -o /boot/grub/grub.cfg
     ```
+
+**If error: will not proceed with blocklists**
+You need to use the `--force` option to allow usage of blocklists.
+Without `--force` you may get the below error and grub-setup will not setup its boot code in the partition boot sector:
+```bash
+/sbin/grub-setup: error: will not proceed with blocklists
+```
+With `--force` you should get:
+```bash
+Installation finished. No error reported.
+```
+For more see [GRUB/Tips and tricks](https://wiki.archlinux.org/title/GRUB/Tips_and_tricks)
 
 ### Configure DHCPCD
 This article describes how to configure network connections on OSI layer 3 and above. Medium-specifics are handled in the `/Ethernet` and [`/Wireless`](https://wiki.archlinux.org/title/Network_configuration/Wireless) subpages.
@@ -412,7 +435,7 @@ pacman -S dhcpcd
     ```
 
 * To start the daemon for a **specific interface** alone, `start`/`enable` the template unit `dhcpcd@interface.service`
-  
+
     Both wired and wireless interface names can be found via ls `/sys/class/net` or `ip link`. Note that `lo` is the virtual loopback interface and not used in making network connections.
 
     To show the status of the interfaces:
@@ -425,7 +448,7 @@ pacman -S dhcpcd
     2: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast master br0 state DOWN mode DEFAULT qlen 1000
     ...
     ```
-    
+
     The `UP` in `<BROADCAST,MULTICAST,UP,LOWER_UP>` is what indicates the interface is up, not the later `state DOWN`.
 
     Issuing the below commands.
@@ -539,7 +562,7 @@ pacman -S mesa lib32-mesa xf86-video-amdgpu vulkan-radeon amdvlk lib32-vulkan-ra
     <summary>Installation - Intel graphics</summary>
 
     Since Intel provides and supports open source drivers, Intel graphics are essentially plug-and-play.
-    
+
     ```bash
     # See https://wiki.archlinux.org/title/intel_graphics#Installation
     pacman -S mesa lib32-mesa xf86-video-intel
@@ -552,7 +575,7 @@ pacman -S mesa lib32-mesa xf86-video-amdgpu vulkan-radeon amdvlk lib32-vulkan-ra
 pacman -S --needed mesa lib32-mesa
 ```
 
-[Xorg](https://wiki.archlinux.org/title/xorg) can be installed with the `xorg-server` package. Additionally, some packages from the `xorg-apps` group are necessary for certain configuration tasks, they are pointed out in the relevant sections. 
+[Xorg](https://wiki.archlinux.org/title/xorg) can be installed with the `xorg-server` package. Additionally, some packages from the `xorg-apps` group are necessary for certain configuration tasks, they are pointed out in the relevant sections.
 
 Finally, an `xorg` group is also available, which includes Xorg server packages, packages from the `xorg-apps` group and fonts.
 
@@ -573,7 +596,7 @@ pacman -S xorg-server xorg-apps xorg-xinit xorg-twm xorg-xclock xterm
     ```
 
     For the installation of other desktop environments, here is a non-exhaustive list:
-    
+
     - To install [GNOME](https://wiki.archlinux.org/title/GNOME): `gnome` `gnome-extra`
 
     - To install [Cinnamon](https://wiki.archlinux.org/title/Cinnamon): `cinnamon` `nemo-fileroller`
