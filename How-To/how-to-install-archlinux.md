@@ -22,6 +22,8 @@ You've reached the website for Arch Linux, a lightweight and flexible Linux® di
 # Installation
 After the installer decompresses and loads the `Linux Kernel` you will be automatically thrown to an Arch Linux Bash terminal (__TTY__) with root privileges
 
+You can also use [archinstall](https://archinstall.archlinux.page/) is a helper library which automates the installation of [Arch Linux](https://wiki.archlinux.org/title/Arch_Linux). It is packaged with different pre-configured installers, such as a "guided" installer.
+
 How to create an [Arch Linux Installer USB drive](https://wiki.archlinux.org/title/USB_flash_installation_medium) (also referred to as "flash drive", "USB stick", "USB key", etc) for booting in BIOS and UEFI systems.
 
 ## Configuration keyboard
