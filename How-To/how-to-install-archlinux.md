@@ -1,4 +1,4 @@
-# ArchLinux Installation *(29/09/2023)*
+# ArchLinux Installation *(01/04/2024)*
 **A simple, lightweight distribution**
 
 You've reached the website for Arch Linux, a lightweight and flexible Linux® distribution that tries to Keep It Simple.
@@ -558,18 +558,14 @@ Conclusion :
 pacman -S mesa lib32-mesa xf86-video-amdgpu vulkan-radeon amdvlk lib32-vulkan-radeon lib32-amdvlk libva-mesa-driver lib32-libva-mesa-driver mesa-vdpau lib32-mesa-vdpau
 ```
 
-4. **Intel graphics**
+4. **Install _Intel_ graphics**
 
-<details>
-    <summary>Installation - Intel graphics</summary>
+Since Intel provides and supports open source drivers, Intel graphics are essentially plug-and-play.
 
-    Since Intel provides and supports open source drivers, Intel graphics are essentially plug-and-play.
-
-    ```bash
-    # See https://wiki.archlinux.org/title/intel_graphics#Installation
-    pacman -S mesa lib32-mesa xf86-video-intel
-    ```
-</details>
+```bash
+# See https://wiki.archlinux.org/title/intel_graphics#Installation
+pacman -S mesa lib32-mesa xf86-video-intel
+```
 
 ### Install display server
 `mesa` is an open-source implementation of the OpenGL specification.
@@ -612,6 +608,9 @@ pacman -S xorg-server xorg-apps xorg-xinit xorg-twm xorg-xclock xterm
     - To install [Budgie](https://wiki.archlinux.org/title/Budgie): `budgie-desktop` `budgie-extras`
 
     - To install [i3-wm](https://wiki.archlinux.org/title/i3): `i3-wm` `i3lock` `i3status` `i3blocks` `dmenu`
+
+    - Install packages with [AUR](https://aur.archlinux.org/packages/yay):
+      - To install [JWM](https://wiki.archlinux.org/title/JWM): *With the [AUR](https://aur.archlinux.org/)* jwm
 
 2. A [display manager](https://wiki.archlinux.org/title/Display_manager), or login manager, is typically a graphical user interface that is displayed at the end of the boot process in place of the default shell.
     ```bash
@@ -671,19 +670,19 @@ Yay is an AUR helper. It is also a Pacman wrapper. It is a popular tool for mana
 
 L'objectif du dépôt de paquetages [`[archlinuxfr]`](https://wiki.archlinux.fr/depot_archlinuxfr) est de rassembler les paquetages des contributeurs de la communauté francophone.
 
-Steps to install Yay on ArchLinux:
+Steps to install *Yay* on ArchLinux:
 
 * Update your system:
 ```bash
 sudo pacman -Syyu
 ```
 
-* Install Git:
+* Install [Git](https://archlinux.org/packages/extra/x86_64/git/):
 ```bash
 sudo pacman -S git
 ```
 
-* Clone the repository:
+* Clone the [yay](https://aur.archlinux.org/packages/yay) repository:
 ```bash
 git clone https://aur.archlinux.org/yay.git
 ```
