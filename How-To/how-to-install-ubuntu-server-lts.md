@@ -63,38 +63,37 @@ sudo apt install bash-completion nano tmux
 
 ### Install Desktop (KDE, Gnome, i3wm)
 #### Install KDE desktop
-    ```shell
-    sudo apt install kde-plasma-desktop
-    ```
 
-    Some defaults package for starter with KDE desktop:
-    ```bash
-    sudo apt install konsole dolphin dolphin-plugins kate gwenview okular kompare kdiff3 kfind spectacle kcolorchooser kolourpaint kruler ark krunner krename kcalc
-    ```
-    KDE is a community of friendly people who create over 200 apps which run on any Linux desktop,
-    and often other platforms too. [Here is the complete list](https://apps.kde.org/)
+Install KDE desktop
+```shell
+sudo apt install kde-plasma-desktop
+```
 
+Some defaults package for starter with KDE desktop:
+```bash
+sudo apt install konsole dolphin dolphin-plugins kate gwenview okular kompare kdiff3 kfind spectacle kcolorchooser kolourpaint kruler ark krunner krename kcalc
+```
+KDE is a community of friendly people who create over 200 apps which run on any Linux desktop,
+and often other platforms too. [Here is the complete list](https://apps.kde.org/)
 
 #### Install Gnome desktop
+By default, the *Window Manager* is `wayland` if you want to change and select `X11` at login (Display Manager).
+```shell
+sudo apt install ubuntu-desktop-minimal
+```
 
-    By default, the *Window Manager* is `wayland` if you want to change and select `X11` at login (Display Manager).
-    ```shell
-    sudo apt install ubuntu-desktop-minimal
-    ```
+Some defaults pakage fot starter with Gnome desktop:
+```shell
+sudo apt install meld font-manager lollypop easytag gpick gitg mypaint gnome-shell-extensions
+```
+Discover the [best applications](https://apps.gnome.org/) in the GNOME ecosystem and learn how to get involved.
 
-    Some defaults pakage fot starter with Gnome desktop:
-    ```shell
-    sudo apt install meld font-manager lollypop easytag gpick gitg mypaint gnome-shell-extensions
-    ```
-    Discover the [best applications](https://apps.gnome.org/) in the GNOME ecosystem and learn how to get involved.
+For the most used gnome-shell extensions [look here](https://github.com/PhineasPhreak/dotfiles/blob/master/packages/gnome-shell-extension.lst)
 
-    For the most used gnome-shell extensions [look here](https://github.com/PhineasPhreak/dotfiles/blob/master/packages/gnome-shell-extension.lst)
-
-    **optional**, custom [gnome-shell spacing](https://gist.github.com/PhineasPhreak/0fe00b4a967eb6f77e577cd0c71dab6e)
+**optional**, custom [gnome-shell spacing](https://gist.github.com/PhineasPhreak/0fe00b4a967eb6f77e577cd0c71dab6e)
 
 #### Install i3wm desktop
 
-    [Installation of i3 for Ubuntu/Archlinux](https://github.com/PhineasPhreak/dotfiles/blob/master/configs/i3wm/.config/i3/README.md)
-
+[Installation of i3 for Ubuntu/Archlinux](https://github.com/PhineasPhreak/dotfiles/blob/master/configs/i3wm/.config/i3/README.md)
 
 For more applications for the Ubuntu distribution [look here](https://github.com/PhineasPhreak/dotfiles/blob/master/packages/pkg.lst)
