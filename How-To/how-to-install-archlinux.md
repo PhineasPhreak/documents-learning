@@ -11,6 +11,8 @@ You've reached the website for Arch Linux, a lightweight and flexible Linux® di
 
 * Installation Guide : [wiki.archlinux.org/title/Installation_guide/](https://wiki.archlinux.org/title/Installation_guide)
 
+* General Recommendations : [wiki.archlinux.org/title/General_recommendations](https://wiki.archlinux.org/title/General_recommendations)
+
 * wiki : [wiki.archlinux.org/](https://wiki.archlinux.org/)
 
 * AUR : [aur.archlinux.org/](https://aur.archlinux.org/) | Go to [install **yay** on Archlinux](#installing-yay-aur-helper-in-archlinux)
