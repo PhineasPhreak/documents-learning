@@ -668,38 +668,40 @@ sudo pacman -S  yakuake vlc mpv ffmpeg juk htop tmux xarchiver flameshot iwd
 ```
 
 # Installing Yay AUR Helper in ArchLinux
-Yay is an AUR helper. It is also a Pacman wrapper. It is a popular tool for managing packages on Arch Linux. It provides a lot of extra functionality including searching, tab-completion, and dependency related features.
+Wiki ArchLinux for the [Arch User Repository](https://wiki.archlinux.org/title/Arch_User_Repository)
+
+`Yay` is an [AUR helper](https://wiki.archlinux.org/title/AUR_helpers). It is also a Pacman wrapper. It is a popular tool for managing packages on Arch Linux. It provides a lot of extra functionality including searching, tab-completion, and dependency related features.
 
 L'objectif du dépôt de paquetages [`[archlinuxfr]`](https://wiki.archlinux.fr/depot_archlinuxfr) est de rassembler les paquetages des contributeurs de la communauté francophone.
 
-Steps to install *Yay* on ArchLinux:
+Steps to install *Yay* on ArchLinux
 
-* Update your system:
+1. Update your system
 ```bash
 sudo pacman -Syyu
 ```
 
-* Install [Git](https://archlinux.org/packages/extra/x86_64/git/):
+2. Install [Git](https://archlinux.org/packages/extra/x86_64/git/)
 ```bash
 sudo pacman -S git
 ```
 
-* Clone the [yay](https://aur.archlinux.org/packages/yay) repository:
+3. Clone the [yay](https://aur.archlinux.org/packages/yay) repository
 ```bash
 git clone https://aur.archlinux.org/yay.git
 ```
 
-* Move to the directory:
+4. Move to the directory
 ```bash
 cd yay
 ```
 
-* Build it:
+5. Build it
 ```bash
 makepkg -si
 ```
 
-* Test it by installing a package:
+6. Test it by installing a package
 ```bash
 yay -S gparted
 ```
