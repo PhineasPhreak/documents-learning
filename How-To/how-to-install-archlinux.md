@@ -668,7 +668,7 @@ sudo pacman -S  yakuake vlc mpv ffmpeg juk htop tmux xarchiver flameshot iwd
 ```
 
 # Installing Yay (AUR) in ArchLinux
-![Arch User Repository](https://wiki.archlinux.org/title/Arch_User_Repository) is a community-driven repository for Arch users, and packages are distributed in the form of PKGBUILD. Since the packages are in PKGBUILD form, you can not install them with Pacman. So, to install packages from AUR, you will need to perform a ![manual build](https://wiki.archlinux.org/title/Arch_User_Repository#Installing_and_upgrading_packages) to install the package or use an ![AUR helper](https://wiki.archlinux.org/title/AUR_helpers#Comparison_tables) to automate the package installation.
+[Arch User Repository](https://wiki.archlinux.org/title/Arch_User_Repository) is a community-driven repository for Arch users, and packages are distributed in the form of PKGBUILD. Since the packages are in PKGBUILD form, you can not install them with Pacman. So, to install packages from AUR, you will need to perform a [manual build](https://wiki.archlinux.org/title/Arch_User_Repository#Installing_and_upgrading_packages) to install the package or use an [AUR helper](https://wiki.archlinux.org/title/AUR_helpers#Comparison_tables) to automate the package installation.
 
 Yay (Yet Another Yogurt) – An AUR Helper Written in Go for Arch Linux distributions. The AUR helpers help to automate the usage of the Arch User Repository in the like searching packages published on the AUR, resolving dependencies, downloading, and building AUR packages.
 
