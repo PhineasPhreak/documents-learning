@@ -1,4 +1,4 @@
-# ArchLinux Installation *(01/04/2024)*
+# ArchLinux Installation *(16/05/2024)*
 **A simple, lightweight distribution**
 
 You've reached the website for Arch Linux, a lightweight and flexible Linux® distribution that tries to Keep It Simple.
@@ -667,44 +667,80 @@ sudo pacman -S konsole dolphin dolphin-plugins firefox kate gwenview p7zip tar z
 sudo pacman -S  yakuake vlc mpv ffmpeg juk htop tmux xarchiver flameshot iwd
 ```
 
-# Installing Yay AUR Helper in ArchLinux
-Wiki ArchLinux for the [Arch User Repository](https://wiki.archlinux.org/title/Arch_User_Repository)
+# Installing Yay (AUR) in ArchLinux
+![Arch User Repository](https://wiki.archlinux.org/title/Arch_User_Repository) is a community-driven repository for Arch users, and packages are distributed in the form of PKGBUILD. Since the packages are in PKGBUILD form, you can not install them with Pacman. So, to install packages from AUR, you will need to perform a ![manual build](https://wiki.archlinux.org/title/Arch_User_Repository#Installing_and_upgrading_packages) to install the package or use an ![AUR helper](https://wiki.archlinux.org/title/AUR_helpers#Comparison_tables) to automate the package installation.
 
-`Yay` is an [AUR helper](https://wiki.archlinux.org/title/AUR_helpers). It is also a Pacman wrapper. It is a popular tool for managing packages on Arch Linux. It provides a lot of extra functionality including searching, tab-completion, and dependency related features.
+Yay (Yet Another Yogurt) – An AUR Helper Written in Go for Arch Linux distributions. The AUR helpers help to automate the usage of the Arch User Repository in the like searching packages published on the AUR, resolving dependencies, downloading, and building AUR packages.
 
 L'objectif du dépôt de paquetages [`[archlinuxfr]`](https://wiki.archlinux.fr/depot_archlinuxfr) est de rassembler les paquetages des contributeurs de la communauté francophone.
 
-Steps to install *Yay* on ArchLinux
+## Steps to install *Yay* on ArchLinux from the source
 
 1. Update your system
+
 ```bash
 sudo pacman -Syyu
 ```
 
-2. Install [Git](https://archlinux.org/packages/extra/x86_64/git/)
+2. Install [Git](https://archlinux.org/packages/extra/x86_64/git/) and development tools to install Yay on Arch Linux **as the root user**.
+
 ```bash
-sudo pacman -S git
+sudo pacman -S --needed git base-devel
 ```
 
-3. Clone the [yay](https://aur.archlinux.org/packages/yay) repository
+3. Then, download the AUR helper [yay](https://aur.archlinux.org/packages/yay) repository package with the `git` command.
+
 ```bash
 git clone https://aur.archlinux.org/yay.git
 ```
 
-4. Move to the directory
+4. And then, go to the downloaded directory.
+
 ```bash
 cd yay
 ```
 
-5. Build it
+5. Finally, build the Yay AUR helper with the below command.
+
 ```bash
 makepkg -si
 ```
 
 6. Test it by installing a package
+
 ```bash
-yay -S gparted
+yay -S brave-bin  # install the brave browser
 ```
 
-Interestingly, Yay will warn you against running as root or sudo. It seems to work fine as an unprivileged user. I haven’t looked into why this is.
+> Interestingly, **Yay will warn you against running as root or sudo**. It seems to work fine as an unprivileged user. I haven’t looked into why this is.
 
+## How to use Yay on Arch Linux
+The Yay AUR helper is similar to Pacman, and you will not find any difficulty in using it for installing packages from AUR.
+
+`yay -Sy <package_name>` Install a package from AUR after synchronizing a remote repository
+
+`yay <package_name>` Package search with the installation menu
+
+`yay -Si <package_name>` View the package information
+
+`yay -R <package_name>` Remove an installed package
+
+`yay -Q` List the locally installed packages
+
+`yay -Q <package_name>` Search for an installed package
+
+`yay -Qi <package_name>` View the installed package’s information
+
+`yay` Alias to `yay -Syu`. Perform system upgrade
+
+`yay -Ps` Print system statistics like Yay version, statistics of installed packages
+
+`yay -Yc` Clean unneeded dependencies
+
+`yay -Y --gendb` Generate the package database of AUR packages that you installed without `yay` AUR helper
+
+`yay -Syu --devel` Perform system upgrades, including AUR packages
+
+`yay -Y --devel --save` Enable AUR package updates permanently. `yay` or `yay -Syu` will update AUR packages as well during the system upgrade.
+
+`man yay` **Read Yay’s official manual**.
