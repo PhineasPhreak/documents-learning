@@ -1,5 +1,7 @@
 # Windows CMD Commands: Mastering the Command Prompt
 ## Introduction
+Reference Microsoft : [Command-line reference A-Z](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands#command-line-reference-a-z)
+
 Documentation : [Windows CMD Commands: Mastering the Command Prompt](https://phoenixnap.com/kb/cmd-commands)
 
 The Windows [operating system](https://phoenixnap.com/glossary/operating-system) features over 280 commands for CMD ([Command Prompt](https://phoenixnap.com/glossary/command-prompt)). Some commands are specific to Windows servers, while others are available for desktop versions. In both cases, CMD commands communicate directly with the OS and allow to perform various [IT automation tasks](https://phoenixnap.com/glossary/it-automation).
@@ -1460,39 +1462,3 @@ All the listed commands are available in a single-page cheat sheet in PDF format
 After reading and trying out the commands from this guide, you've familiarized yourself with the Windows Command Prompt (CMD) tool. Windows allows performing a variety of tasks through the command prompt using just commands.
 
 Continue practicing and researching commands further to master the Command Prompt in Windows.
-
-## How to Install Windows 11 Without a Microsoft Account
-By default, you must log in with a Microsoft account in order to install Windows 11 or go through the box (OOBE) setup process that triggers the first time you turn on a new laptop or desktop. Though Microsoft accounts are free, there are many reasons why you would want to install Windows 11 using a local account only.
-
-Maybe you want to use a local account because you are installing Windows 11 on a child's PC or on a PC that you plan to sell, give to a friend or donate to a charity (without giving other people access to personal data). Or perhaps you just like your privacy and don't want to create an account with Microsoft in the first place.
-
-Whatever your reason for doing so, it's easy to install or set up Windows 11 with a without using a Microsoft account. Below, we'll show you two methods: the first involves issuing some commands during the install / OOBE processor. The second, which only works for a clean install, requires you to create a modified USB install disk using a free tool called Rufus.
-
-### How to Install Windows 11 Without a Microsoft Account
-There's a simple trick for setting up a local account that involves issuing a command to keep Windows from requiring Internet to install / set up and then cutting off Internet at just the right time in the setup process. This works the same way whether you are doing a clean install of Windows 11 or following the OOBE process on a store-bought computer.
-
-1. **Follow the Windows 11 install process until you get to the "choose a country" screen.**
-   Now's the time to cut off the Internet. However, before you do, you need to issue a command that prevents Windows 11 from forcing you to have an Internet connection.
-
-2. **Hit Shift + F10**. A command prompt appears.
-
-3. **Type OOBE\BYPASSNRO** to disable the Internet connection requirement.
-   The computer will reboot and return you to this screen.
-
-4. **Hit Shift + F10** again and this time **Type** *ipconfig /release*. Then **hit Enter** to disable the Internet.
-
-5. **Close the command prompt.**
-
-6. **Continue with the installation**, choosing the region. keyboard and second keyboard option.
-   A screen saying "Let's connect you to a network" appears, warning you that you need Internet.
-
-7. **Click "I don't have Internet"** to continue.
-
-8. **Click Continue with limited setup.**
-   A new login screen appears asking "Who's going to use this device?"
-
-9. **Enter a username** you want to use for your local account and **click Next**.
-
-10. **Enter a password** you would like to use and **click Next**. You can also leave this field blank and have no password, but that's not recommended.
-
-11. **Complete the rest of the install process** as you normally would.
