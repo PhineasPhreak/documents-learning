@@ -2,6 +2,7 @@
 Reference :
 - [Guide created by Andrew Lee](https://gist.github.com/Alee14/e8ce6306a038902df6e7a6d667544ac9)
 - [pratyakshm - Github](https://gist.github.com/pratyakshm/f19c106205f9327e9f1d538fb91fce65)
+- [Apply Windows Image using DISM Instead of Clean Install](https://www.tenforums.com/tutorials/84331-apply-windows-image-using-dism-instead-clean-install.html)
 
 Reference Microsoft :
 - [Capture and apply Windows, system, and recovery partitions](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/capture-and-apply-windows-system-and-recovery-partitions?view=windows-11)
@@ -12,7 +13,7 @@ Reference Microsoft :
 > Be cautions when doing this when dualbooting, please backup any existing data or you will lose them all.
 
 ## Requirements
-1. [ISO file](https://www.microsoft.com/en-ca/software-download/windows11) from Microsoft.com
+1. [Windows 11 ISO file](https://www.microsoft.com/en-ca/software-download/windows11) | [Windows 10 ISO File](https://www.microsoft.com/en-us/software-download/windows10ISO) from Microsoft.com
 2. **Rufus** [Microsoft Store](https://www.microsoft.com/store/productId/9PC3H3V7Q9CH) / [GitHub](https://github.com/pbatard/rufus) / [Website](http://rufus.ie/) | **Win32 Disk Imager** [Website](https://win32diskimager.org/) / [SourceForge](https://sourceforge.net/projects/win32diskimager/)
 3. USB drive [8GB or more]
 
@@ -28,7 +29,9 @@ Reference Microsoft :
 ### Step 3: Open CMD
 First open CMD by pressing the following keys after booting into setup: `Shift + F10`
 
-### Step 4: Booting and manually setting up partitions for **MBR**
+### Step 4: Booting and manually setting up partitions for **BIOS/MBR**
+On **BIOS** based machine with **MBR** disk setup will now create the required **System Reserved** partition (500 MB) using the rest of allocated space for Windows partition.
+
 ```console
 diskpart
 list disk
@@ -37,19 +40,21 @@ clean # Clearing the partitions
 convert mbr
 -----------------------
 (Creating recovery is optional)
-create part primary size 500
-format quick label Recovery
+create part primary size=500
+format quick label="Recovery"
 assign letter R
 set id 27
 -----------------------
 create part primary
-format quick label Windows (or label of your choice)
+format quick label="Windows" (or label of your choice)
 assign letter C (or E)
 active
 exit
 ```
 
-### Step 4: Booting and manually setting up partitions for **UEFI**
+### Step 4: Booting and manually setting up partitions for **UEFI/GPT**
+On **UEFI** based machine with **GPT** disk the Recovery partition (450 MB), **EFI System** partition (99 MB) and **Microsoft Reserved partition** (MSR, 16 MB) will be created, rest of the allocated space being used for Windows partition.
+
 - Use `diskpart` to open up [Microsoft DiskPart](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/diskpart) (needed for partitioning).
 - Use `list disk` to list disks online on your device.
   Choose the disk you'll install Windows on. For the entirety of this tutorial, I will assume its disk 0.
@@ -86,13 +91,13 @@ Listing SKUs like Home, Pro, Education, Ultimate, etc.
 We are going to **install Windows 11 Pro**, which is **Index:6** in my case.
 
 > [!NOTE]
-> Reference Microsoft : [DISM Image Management Command-Line Options](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/dism-image-management-command-line-options-s14?view=windows-11)
+> Reference Microsoft : [DISM Deployment Image Service Management Command-Line Options](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/dism-image-management-command-line-options-s14?view=windows-11)
 
 ### Step 6: Deploying the images onto disk (OS installation)
 Copies the content from the **install.wim** file to the main disk.
 - Use `dism /Apply-Image /ImageFile:X:\sources\install.wim /Index:6 /ApplyDir:C:` to copy the OS files.
 
-### Step 7: Creating the boot file on the MBR/EFI partition
+### Step 7: Creating the boot file on the (BIOS-MBR)/(UEFI-GPT) partition
 [BCDBoot](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/bcdboot-command-line-options-techref-di?view=windows-11) is a command-line tool used to configure the boot files on a PC or device to run the Windows operating system.
 
 For **MBR only** :
@@ -107,7 +112,7 @@ For **EFI** :
 
 ### Step 8: Reboot your PC
 Go ahead, **close all active Windows** and **reboot** your PC.
-Or, using the command line `C:\Windows\System32\shutdown.exe /r /fw /f /t 0` or `wpeutil reboot`
+Using the command line `C:\Windows\System32\shutdown.exe /r /fw /f /t 0` or `wpeutil reboot`
 
 *Sees Windows 11 boot logo*
 
