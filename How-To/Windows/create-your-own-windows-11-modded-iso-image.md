@@ -16,6 +16,9 @@ Reference :
 Reference Microsoft :
 - [Add or Remove Packages Offline Using DISM](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/add-or-remove-packages-offline-using-dism?view=windows-11)
 
+## Download Windows 11
+Extract the [Windows 11 ISO image](https://www.microsoft.com/en-us/software-download/windows11) after downloading it from the official website.
+
 ## 1. `/Get-ImageInfo` Displays information about the images that are contained in a .wim, .ffu, .vhd or .vhdx file
 Displays information about the images that are contained in a .wim, .ffu, .vhd or .vhdx file. When used with the /Index or /Name argument, information about the specified image is displayed, which includes if an image is a WIMBoot image, if the image is Windows 8.1, see [Take Inventory of an Image or Component Using DISM](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/take-inventory-of-an-image-or-component-using-dism?view=windows-11). The /Name argument does not apply to VHD files. You must specify /Index:1 for FFU and VHDX files.
 
