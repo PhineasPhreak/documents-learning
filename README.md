@@ -8,7 +8,7 @@
 ## GPU Passthrough
 GPU passthrough is a technology that allows the Linux kernel to directly present an internal PCI GPU to a virtual machine.
 
-See tutorial about [Complete Single GPU Passthrough](https://github.com/QaidVoid/Complete-Single-GPU-Passthrough) | [Github joeknock90](https://github.com/joeknock90/Single-GPU-Passthrough)
+See tutorial about [Complete Single GPU Passthrough](https://github.com/QaidVoid/Complete-Single-GPU-Passthrough) | [Github joeknock90](https://github.com/joeknock90/Single-GPU-Passthrough) | [Github bryansteiner](https://github.com/bryansteiner/gpu-passthrough-tutorial)
 
 Full Archlinux wiki about [PCI Passthrough](https://wiki.archlinux.org/title/PCI_passthrough_via_OVMF)
 
