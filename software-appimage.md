@@ -28,3 +28,6 @@ Watch list Apps in AppImage format : [Watchlist](https://appimage.github.io/apps
 | Jitsi         | [Jitsi](https://github.com/jitsi/jitsi-meet-electron/releases)                                                                          |
 | Bitwarden     | [Bitwarden](https://bitwarden.com/download/)                                                                                            |
 | Texstudio     | [Texstudio](https://www.texstudio.org/)                                                                                                 |
+| LocalSend     | [LocalSend](https://localsend.org/)                                                                                                     |
+| FreeCAD       | [FreeCAD](https://www.freecad.org/)                                                                                                     |
+| VeraCrypt     | [VeraCrypt](https://veracrypt.io/en/Downloads.html)                                                                                     |
