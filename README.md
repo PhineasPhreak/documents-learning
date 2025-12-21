@@ -30,8 +30,6 @@ The entire Pro Git book, written by Scott Chacon and Ben Straub and published by
 ## VIM
 Vim is a highly configurable text editor built to make creating and changing any kind of text very efficient. It is included as "vi" with most UNIX systems and with Apple OS X.
 
-* Site : [VIM - Graphical Cheat Sheet](https://www.glump.net/_media/howto/desktop/vim-graphical-cheat-sheet-and-tutorial/vi-vim-cheat-sheet-and-tutorial.pdf)
-
 * Site : [Vim Alphabetic Reference Card of Commonly Used Commands](https://u-tools.com/vimrefcard.pdf)
 
 ## Coreutils
