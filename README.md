@@ -25,7 +25,7 @@ The result is better, more reliable, and more adaptable technologies.
 ## Git Book
 The entire Pro Git book, written by Scott Chacon and Ben Straub and published by Apress, is available here.
 
-* Download : [English - Version 2.1.261](https://github.com/progit/progit2/releases/download/2.1.261/progit.pdf) | [French - Version 2.1.48](https://github.com/progit/progit2-fr/releases/download/2.1.48/progit_v2.1.48.pdf)
+* Download : [English - Version 2.1.449](https://github.com/progit/progit2/releases/download/2.1.449/progit.pdf) | [French - Version 2.1.78](https://github.com/progit/progit2-fr/releases/download/2.1.78/progit.pdf)
 
 ## VIM
 Vim is a highly configurable text editor built to make creating and changing any kind of text very efficient. It is included as "vi" with most UNIX systems and with Apple OS X.
