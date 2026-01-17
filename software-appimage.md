@@ -34,3 +34,4 @@ Watch list Apps in AppImage format : [Watchlist](https://appimage.github.io/apps
 | CoolerControl | [CoolerControl](https://docs.coolercontrol.org/) & [AppImage CoolerControl](https://gitlab.com/coolercontrol/coolercontrol/-/releases/permalink/latest/downloads/packages/CoolerControlD-x86_64.AppImage) |
 | PINCE         | [PINCE](https://github.com/korcankaraokcu/PINCE)                                                                                                                                                          |
 | MemSed        | [MemSed](https://github.com/WillyJL/MemSed)                                                                                                                                                               |
+| Fresh-Editor  | [Fresh-Editor Site](https://getfresh.dev/) & [Fresh-Editor Github](https://github.com/sinelaw/fresh)                                                                                                       |
