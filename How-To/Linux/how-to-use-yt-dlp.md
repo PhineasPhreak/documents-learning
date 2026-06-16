@@ -58,9 +58,9 @@ Embed subtitles to video file (if they exist) `--embed-subs`:
 yt-dlp -f 'bv[height=1080][ext=mp4]+ba[ext=m4a]' --embed-subs --merge-output-format mp4 https://www.youtube.com/watch?v=1La4QzGeaaQ -o '%(id)s.mp4'
 ```
 
-Embed chaperts to video file (if they exist), you can use `mkv` extension `--embed-chaperts`:
+Embed chapters to video file (if they exist), you can use `mkv` extension also if you want `--embed-chapters`:
 ```shell
-yt-dlp -f 'bv[height=1080][ext=mp4]+ba[ext=m4a]' --embed-chaperts --merge-output-format mp4 https://www.youtube.com/watch?v=1La4QzGeaaQ -o '%(id)s.mp4'
+yt-dlp -f 'bv[height=1080][ext=mp4]+ba[ext=m4a]' --embed-chapters --merge-output-format mp4 https://www.youtube.com/watch?v=1La4QzGeaaQ -o '%(id)s.mp4'
 ```
 
 Embed metadata about the video `--embed-metadata`:
