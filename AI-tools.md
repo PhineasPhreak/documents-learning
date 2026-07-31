@@ -3,47 +3,47 @@
 ## Execution and Interface Tools
 List of `TUI` or `GUI` interface tools for local large language models (LLMs).
 
-| Tool                      | Type      | Description                                                                        | Website                                            | GitHub                                             |
-|:--------------------------|:----------|:-----------------------------------------------------------------------------------|:---------------------------------------------------|:---------------------------------------------------|
-| **Ollama**                | Engine    | Command-line tool to run models easily. Supports Windows, Linux, macOS.            | https://ollama.com                                 | https://github.com/ollama/ollama                   |
-| **LM Studio**             | Interface | GUI to search, download, and run GGUF models locally.                              | https://lmstudio.ai                                | https://github.com/lmstudio-ai                     |
-| **KoboldCPP**             | Executor  | Single-binary executor optimized for GGUF, lightweight and performant.             | https://github.com/LostRuins/koboldcpp             | https://github.com/LostRuins/koboldcpp             |
-| **Text Generation WebUI** | Interface | Advanced web interface (Oobabooga) supporting numerous backends and extensions.    | https://github.com/oobabooga/text-generation-webui | https://github.com/oobabooga/text-generation-webui |
-| **Open WebUI**            | Interface | ChatGPT-like interface connecting to Ollama or other API backends.                 | https://openwebui.com                              | https://github.com/open-webui/open-webui           |
-| **LocalAI**               | Server    | Open source drop-in replacement for the OpenAI API, compatible with many backends. | https://localai.io                                 | https://github.com/mudler/LocalAI                  |
-| **Jan**                   | Interface | Desktop alternative to LM Studio, fully local and open source.                     | https://jan.ai                                     | https://github.com/janhq/jan                       |
-| **OpenCode**              | Interface | Desktop interface to run local LLMs via Ollama or compatible APIs.                 | https://github.com/OpenCodeAI/opencode             | https://github.com/OpenCodeAI/opencode             |
+| Tool                      | Type      | Description                                                                        | Website                                                        | GitHub                                                                |
+|:--------------------------|:----------|:-----------------------------------------------------------------------------------|:---------------------------------------------------------------|:----------------------------------------------------------------------|
+| **Ollama**                | Engine    | Command-line tool to run models easily. Supports Windows, Linux, macOS.            | [Ollama](https://ollama.com)                                   | [Ollama Github](https://github.com/ollama/ollama)                     |
+| **LM Studio**             | Interface | GUI to search, download, and run GGUF models locally.                              | [LM-Studio](https://lmstudio.ai)                               | [LM-Studio Github](https://github.com/lmstudio-ai)                    |
+| **KoboldCPP**             | Executor  | Single-binary executor optimized for GGUF, lightweight and performant.             | [KoboldCPP](https://github.com/LostRuins/koboldcpp)            | [KoboldCPP Github](https://github.com/LostRuins/koboldcpp)            |
+| **Text Generation WebUI** | Interface | Advanced web interface (Oobabooga) supporting numerous backends and extensions.    | [Text Gen](https://github.com/oobabooga/text-generation-webui) | [Text Gen github](https://github.com/oobabooga/text-generation-webui) |
+| **Open WebUI**            | Interface | ChatGPT-like interface connecting to Ollama or other API backends.                 | [OpenWebui](https://openwebui.com)                             | [OpenWebUI Github](https://github.com/open-webui/open-webui)          |
+| **LocalAI**               | Server    | Open source drop-in replacement for the OpenAI API, compatible with many backends. | [LocalAI](https://localai.io)                                  | [LocalAI Github](https://github.com/mudler/LocalAI)                   |
+| **Jan**                   | Interface | Desktop alternative to LM Studio, fully local and open source.                     | [Jan](https://jan.ai)                                          | [Jan Github](https://github.com/janhq/jan)                            |
+| **OpenCode**              | Interface | Desktop interface to run local LLMs via Ollama or compatible APIs.                 | [OpenCode](https://github.com/OpenCodeAI/opencode)             | [OpenCode Github](https://github.com/OpenCodeAI/opencode)             |
 
 
 ## Open Source Language Models (LLMs)
 Recommended format for local use: `GGUF` (via Ollama, LM Studio, etc.)
 
-| Model                      | Publisher  | Size (Params)         | Status / Use Case                                                                        | Hugging Face Link                  |
-|:---------------------------|:-----------|:----------------------|:-----------------------------------------------------------------------------------------|:-----------------------------------|
-| **Llama 3.1 / 3.2**        | Meta       | 1B, 3B, 8B, 70B, 405B | Current SOTA, General purpose, Coding                                                    | https://huggingface.co/meta-llama  |
-| **Gemma 2 / Gemma 3**      | Google     | 2B, 9B, 27B, 32B      | Lightweight, High efficiency                                                             | https://huggingface.co/google      |
-| **Mistral / Mixtral**      | Mistral AI | 7B, 8x7B, 8x22B       | Efficiency, Multilingual, Reasoning                                                      | https://huggingface.co/mistralai   |
-| **Qwen 2.5 / 3**           | Alibaba    | 0.5B to 72B           | Coding, Math, Multilingual                                                               | https://huggingface.co/Qwen        |
-| **Phi-3 / Phi-4**          | Microsoft  | 3.8B, 14B, 120B       | Small but capable, Education                                                             | https://huggingface.co/microsoft   |
-| **Falcon 2 / 3**           | TII UAE    | 7B, 11B, 180B         | General purpose, Coding                                                                  | https://huggingface.co/tiiuae      |
-| **StarCoder2 / 3**         | BigCode    | 3B, 7B, 15B, 20B      | Code generation and completion                                                           | https://huggingface.co/bigcode     |
-| **DeepSeek-Coder**         | DeepSeek   | 1.3B, 6.7B, 33B       | Specialized in Coding                                                                    | https://huggingface.co/deepseek-ai |
-| **Gemma 4 (Fork/Preview)** | Community  | Variable              | *Future/Community:* Anticipated next-gen Google model (Unofficial).                      | Search "Gemma 4" on HuggingFace    |
-| **Qwen 3.6 (Preview)**     | Community  | Variable              | *Future/Community:* Anticipated successor to Qwen 3 (Unofficial).                        | Search "Qwen 3.6" on HuggingFace   |
-| **GPT-OSS**                | Community  | Variable              | *Future/Community:* Open Source forks mimicking GPT architecture (e.g., OpenChat, Orca). | Search "GPT-OSS" on HuggingFace    |
+| Model                      | Publisher  | Size (Params)         | Status / Use Case                                                                        | Hugging Face Link                                 |
+|:---------------------------|:-----------|:----------------------|:-----------------------------------------------------------------------------------------|:--------------------------------------------------|
+| **Llama 3.1 / 3.2**        | Meta       | 1B, 3B, 8B, 70B, 405B | Current SOTA, General purpose, Coding                                                    | [HG Llama](https://huggingface.co/meta-llama)     |
+| **Gemma 2 / Gemma 3**      | Google     | 2B, 9B, 27B, 32B      | Lightweight, High efficiency                                                             | [HG Gemma](https://huggingface.co/google)         |
+| **Mistral / Mixtral**      | Mistral AI | 7B, 8x7B, 8x22B       | Efficiency, Multilingual, Reasoning                                                      | [HG Mistral](https://huggingface.co/mistralai)    |
+| **Qwen 2.5 / 3**           | Alibaba    | 0.5B to 72B           | Coding, Math, Multilingual                                                               | [HG Qwen](https://huggingface.co/Qwen)            |
+| **Phi-3 / Phi-4**          | Microsoft  | 3.8B, 14B, 120B       | Small but capable, Education                                                             | [HG Phi](https://huggingface.co/microsoft)        |
+| **Falcon 2 / 3**           | TII UAE    | 7B, 11B, 180B         | General purpose, Coding                                                                  | [HG Falcon](https://huggingface.co/tiiuae)        |
+| **StarCoder2 / 3**         | BigCode    | 3B, 7B, 15B, 20B      | Code generation and completion                                                           | [HG StarCoder2](https://huggingface.co/bigcode)   |
+| **DeepSeek-Coder**         | DeepSeek   | 1.3B, 6.7B, 33B       | Specialized in Coding                                                                    | [HG DeepSeek](https://huggingface.co/deepseek-ai) |
+| **Gemma 4 (Fork/Preview)** | Community  | Variable              | *Future/Community:* Anticipated next-gen Google model (Unofficial).                      | Search "Gemma 4" on HF                            |
+| **Qwen 3.6 (Preview)**     | Community  | Variable              | *Future/Community:* Anticipated successor to Qwen 3 (Unofficial).                        | Search "Qwen 3.6" on HF                           |
+| **GPT-OSS**                | Community  | Variable              | *Future/Community:* Open Source forks mimicking GPT architecture (e.g., OpenChat, Orca). | Search "GPT-OSS" on HF                            |
 
 
 ## AI Agents and Workflows
 Tools for orchestrating complex tasks (search, code execution, tool usage)
 
-| Tool                | Type      | Description                                                                        | Website                                     | GitHub                                       |
-|:--------------------|:----------|:-----------------------------------------------------------------------------------|:--------------------------------------------|:---------------------------------------------|
-| **LangChain**       | Framework | Python/JS library for building applications with LLMs and agents.                  | https://www.langchain.com                   | https://github.com/langchain-ai/langchain    |
-| **LlamaIndex**      | Framework | Framework for connecting LLMs to custom data (RAG).                                | https://www.llamaindex.ai                   | https://github.com/run-llama/llama_index     |
-| **AutoGen**         | Framework | Microsoft framework for creating collaborative multi-agent conversational systems. | https://microsoft.github.io/autogen/        | https://github.com/microsoft/autogen         |
-| **CrewAI**          | Framework | Framework for orchestrating role-playing autonomous agents.                        | https://www.crewai.com                      | https://github.com/joaomdmoura/crewai        |
-| **Haystack**        | Framework | Modular framework for semantic search and RAG applications.                        | https://haystack.deepset.ai                 | https://github.com/deepset-ai/haystack       |
-| **Semantic Kernel** | SDK       | Microsoft SDK (C#, Python, Java, JS) for integrating AI into enterprise apps.      | https://learn.microsoft.com/semantic-kernel | https://github.com/microsoft/semantic-kernel |
+| Tool                | Type      | Description                                                                        | Website                                                        | GitHub                                                                 |
+|:--------------------|:----------|:-----------------------------------------------------------------------------------|:---------------------------------------------------------------|:-----------------------------------------------------------------------|
+| **LangChain**       | Framework | Python/JS library for building applications with LLMs and agents.                  | [LangChain](https://www.langchain.com)                         | [LangChain](https://github.com/langchain-ai/langchain)          |
+| **LlamaIndex**      | Framework | Framework for connecting LLMs to custom data (RAG).                                | [LlamaIndex](https://www.llamaindex.ai)                        | [LlamaIndex](https://github.com/run-llama/llama_index)          |
+| **AutoGen**         | Framework | Microsoft framework for creating collaborative multi-agent conversational systems. | [AutoGen](https://microsoft.github.io/autogen/)                | [AutoGen](https://github.com/microsoft/autogen)                 |
+| **CrewAI**          | Framework | Framework for orchestrating role-playing autonomous agents.                        | [CrewAI](https://www.crewai.com)                               | [CrewAI](https://github.com/joaomdmoura/crewai)                 |
+| **Haystack**        | Framework | Modular framework for semantic search and RAG applications.                        | [Haystack](https://haystack.deepset.ai)                        | [Haystack](https://github.com/deepset-ai/haystack)              |
+| **Semantic Kernel** | SDK       | Microsoft SDK (C#, Python, Java, JS) for integrating AI into enterprise apps.      | [Semantic Kernel](https://learn.microsoft.com/semantic-kernel) | [Semantic Kernel](https://github.com/microsoft/semantic-kernel) |
 
 
 ## Resources for Downloading Models
