@@ -37,3 +37,4 @@ Watch list Apps in AppImage format : [Watchlist](https://appimage.github.io/apps
 | Fresh-Editor  | [Fresh-Editor Site](https://getfresh.dev/) & [Fresh-Editor Github](https://github.com/sinelaw/fresh)                                                                                                      |
 | Wealthfolio   | [Wealthfolio](https://wealthfolio.app/) & [Wealthfolio Github](https://github.com/wealthfolio/wealthfolio)                                                                                                |
 | LibreSprite   | [LibreSprite](https://libresprite.github.io/#!/) & [LibreSprite Github](https://github.com/LibreSprite/LibreSprite/releases)                                                                              |
+| qBittorrent   | [qBittorrent](https://www.qbittorrent.org/) & [qBittorrent Github](https://github.com/qbittorrent/qBittorrent)                                                                                            |
