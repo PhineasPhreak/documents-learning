@@ -51,3 +51,4 @@ Free and Open Source applications (FOSS) that replace or are better than their p
 | Spacedrive    | [Spacedrive](https://spacedrive.com/) & [Spacedrive](https://github.com/spacedriveapp/spacedrive)                                               |
 | Asyar         | [Asyar](https://asyar.org/) & [Asyar Github](https://github.com/Xoshbin/asyar)                                                                  |
 | Ueli          | [Ueli](https://ueli.app/) & [Ueli Github](https://github.com/oliverschwendener/ueli)                                                            |
+| FeedFlow      | [FeedFlow](https://www.feedflow.dev/) & [FeedFlow](https://github.com/prof18/feed-flow)                                                         |
