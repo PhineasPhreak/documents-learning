@@ -75,13 +75,19 @@ yt-dlp -f 'ba' -x --audio-format mp3 https://www.youtube.com/watch?v=1La4QzGeaaQ
 
 All the options for format selection and filtering can be found [here](https://github.com/yt-dlp/yt-dlp#format-selection) and [output template](https://github.com/yt-dlp/yt-dlp#output-template), There are a lot.
 
+## Releases
+Download a Youtube release tab, with the audio quality and convert the audio to `mp3/320K` with `--embed-metadata` and `--embed-thumbnail` in the directory `$HOME/Downloads/DreamWaveFM`.
+```shell
+yt-dlp -f 'ba' -x --audio-quality 320K --audio-format mp3 --embed-thumbnail --embed-metadata -P "$HOME/Downloads/DreamWaveFM" -o "%(playlist)s/%(playlist_index)03d - %(title)s.%(ext)s" "https://www.youtube.com/@dream_wavefm/releases"
+```
+
 ## Playlists
-Download a YouTube playlist with the videos being 1080p and the best audio. Save into *channel_id/playlist_id* directory with the video added to an archive text file:
+Download a YouTube playlist with the videos being `1080p` and the best audio. Save into *channel_id/playlist_id* directory with the video added to an archive text file:
 ```shell
 yt-dlp -f 'bv*[height=1080]+ba' --download-archive videos.txt  https://www.youtube.com/playlist?list=PLlVlyGVtvuVnUjA4d6gHKCSrLAAm2n1e6 -o '%(channel_id)s/%(playlist_id)s/%(id)s.%(ext)s'
 ```
 
-Download a YouTube playlist with the best audio quality and convert the audio to mp3/320K format:
+Download a YouTube playlist with the best audio quality and convert the audio to `mp3/320K` format:
 ```shell
 yt-dlp -f 'ba' -x --audio-quality 320K --audio-format mp3 https://www.youtube.com/playlist?list=OLAK5uy_lZlCKkJNxwisNeB7bskSuYr6czRSrUAKQ --embed-metadata -o '%(playlist_index)s. %(title)s.%(ext)s'
 ```
