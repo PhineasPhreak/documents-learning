@@ -52,3 +52,5 @@ Free and Open Source applications (FOSS) that replace or are better than their p
 | Asyar         | [Asyar](https://asyar.org/) & [Asyar Github](https://github.com/Xoshbin/asyar)                                                                  |
 | Ueli          | [Ueli](https://ueli.app/) & [Ueli Github](https://github.com/oliverschwendener/ueli)                                                            |
 | FeedFlow      | [FeedFlow](https://www.feedflow.dev/) & [FeedFlow](https://github.com/prof18/feed-flow)                                                         |
+| Vocalinux     | [Vocalinux](https://vocalinux.com/) & [Vocalinux Github](https://github.com/VocaHQ/vocalinux)                                                   |
+|               |                                                                                                                                                 |
