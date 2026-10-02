@@ -76,17 +76,21 @@ You must configure Opencode to connect to the local LM Studio server via its con
 
     ```jsonc
     {
-    "$schema": "https://opencode.ai/config.json",
-
-    "provider": {
-      "lmstudio": {
-        "type": "openai",
-        "baseURL": "http://127.0.0.1:1234/v1",
-        "apiKey": "lm-studio"
+      "$schema": "https://opencode.ai/config.json",
+      "provider": {
+        "lmstudio": {
+          "type": "openai",
+          "name": "LM Studio (local)",
+          "options": {
+            "baseURL": "http://localhost:1234/v1"
+          },
+          "models": {
+            "google/gemma-4-e4b": {
+              "name": "Gemma4 E4B Q6_K"
+            }
+          }
+        }
       }
-    },
-
-    "model": "lmstudio:qwen3-32b"  // <-- Replace with the exact model identifier shown by 'curl http://127.0.0.1:1234/v1/models'
     }
     ```
 
